@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		778065931F77242E0072D360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065921F77242E0072D360 /* AppDelegate.swift */; };
+		778065951F77242E0072D360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065941F77242E0072D360 /* ViewController.swift */; };
+		778065981F77242E0072D360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778065961F77242E0072D360 /* Main.storyboard */; };
+		7780659A1F77242E0072D360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 778065991F77242E0072D360 /* Assets.xcassets */; };
+		7780659D1F77242E0072D360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7780659B1F77242E0072D360 /* LaunchScreen.storyboard */; };
+		FEFC15240B045E0F39B04751 /* Pods_wowzdone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3229FD92F5BD21FD7FDCE44C /* Pods_wowzdone.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3229FD92F5BD21FD7FDCE44C /* Pods_wowzdone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wowzdone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7780658F1F77242E0072D360 /* wowzdone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wowzdone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		778065921F77242E0072D360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		778065941F77242E0072D360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		778065971F77242E0072D360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		778065991F77242E0072D360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7780659C1F77242E0072D360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7780659E1F77242E0072D360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3A406A920877708B48AEA48 /* Pods-wowzdone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wowzdone.release.xcconfig"; path = "Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone.release.xcconfig"; sourceTree = "<group>"; };
+		E25CC57071598872E27EA541 /* Pods-wowzdone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wowzdone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7780658C1F77242E0072D360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEFC15240B045E0F39B04751 /* Pods_wowzdone.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C643E4FAC7186F63347BACC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E25CC57071598872E27EA541 /* Pods-wowzdone.debug.xcconfig */,
+				C3A406A920877708B48AEA48 /* Pods-wowzdone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		778065861F77242E0072D360 = {
+			isa = PBXGroup;
+			children = (
+				778065911F77242E0072D360 /* wowzdone */,
+				778065901F77242E0072D360 /* Products */,
+				1C643E4FAC7186F63347BACC /* Pods */,
+				8043F011397382BAF687D2E1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		778065901F77242E0072D360 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7780658F1F77242E0072D360 /* wowzdone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		778065911F77242E0072D360 /* wowzdone */ = {
+			isa = PBXGroup;
+			children = (
+				778065921F77242E0072D360 /* AppDelegate.swift */,
+				778065941F77242E0072D360 /* ViewController.swift */,
+				778065961F77242E0072D360 /* Main.storyboard */,
+				778065991F77242E0072D360 /* Assets.xcassets */,
+				7780659B1F77242E0072D360 /* LaunchScreen.storyboard */,
+				7780659E1F77242E0072D360 /* Info.plist */,
+			);
+			path = wowzdone;
+			sourceTree = "<group>";
+		};
+		8043F011397382BAF687D2E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3229FD92F5BD21FD7FDCE44C /* Pods_wowzdone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7780658E1F77242E0072D360 /* wowzdone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 778065A11F77242E0072D360 /* Build configuration list for PBXNativeTarget "wowzdone" */;
+			buildPhases = (
+				63256EEBBCB8AB8C923D1FD7 /* [CP] Check Pods Manifest.lock */,
+				7780658B1F77242E0072D360 /* Sources */,
+				7780658C1F77242E0072D360 /* Frameworks */,
+				7780658D1F77242E0072D360 /* Resources */,
+				AAC461059C3E10DD686F768E /* [CP] Embed Pods Frameworks */,
+				498F84A48DED02D14130AFF3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wowzdone;
+			productName = wowzdone;
+			productReference = 7780658F1F77242E0072D360 /* wowzdone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		778065871F77242E0072D360 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Leon Mak";
+				TargetAttributes = {
+					7780658E1F77242E0072D360 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7780658A1F77242E0072D360 /* Build configuration list for PBXProject "wowzdone" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 778065861F77242E0072D360;
+			productRefGroup = 778065901F77242E0072D360 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7780658E1F77242E0072D360 /* wowzdone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7780658D1F77242E0072D360 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7780659D1F77242E0072D360 /* LaunchScreen.storyboard in Resources */,
+				7780659A1F77242E0072D360 /* Assets.xcassets in Resources */,
+				778065981F77242E0072D360 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		498F84A48DED02D14130AFF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63256EEBBCB8AB8C923D1FD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wowzdone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAC461059C3E10DD686F768E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GzipSwift-beta/Gzip.framework",
+				"${BUILT_PRODUCTS_DIR}/HyperTrack/HyperTrack.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gzip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyperTrack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7780658B1F77242E0072D360 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				778065951F77242E0072D360 /* ViewController.swift in Sources */,
+				778065931F77242E0072D360 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		778065961F77242E0072D360 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				778065971F77242E0072D360 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7780659B1F77242E0072D360 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7780659C1F77242E0072D360 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7780659F1F77242E0072D360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		778065A01F77242E0072D360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		778065A21F77242E0072D360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E25CC57071598872E27EA541 /* Pods-wowzdone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GMX3JSSQ7;
+				INFOPLIST_FILE = wowzdone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Maklemak.wowzdone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		778065A31F77242E0072D360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3A406A920877708B48AEA48 /* Pods-wowzdone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GMX3JSSQ7;
+				INFOPLIST_FILE = wowzdone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Maklemak.wowzdone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7780658A1F77242E0072D360 /* Build configuration list for PBXProject "wowzdone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7780659F1F77242E0072D360 /* Debug */,
+				778065A01F77242E0072D360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		778065A11F77242E0072D360 /* Build configuration list for PBXNativeTarget "wowzdone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				778065A21F77242E0072D360 /* Debug */,
+				778065A31F77242E0072D360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 778065871F77242E0072D360 /* Project object */;
+}
