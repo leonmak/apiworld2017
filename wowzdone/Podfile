@@ -8,5 +8,6 @@ target 'wowzdone' do
   # Pods for wowzdone
   pod 'HyperTrack'
   pod 'Parse'
+  pod 'Alamofire'
 
 end
