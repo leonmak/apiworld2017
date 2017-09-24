@@ -296,8 +296,10 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
             print("STARTED JOB")
             locationManager.startUpdatingLocation()
             upsertAction()
+            ParseServerManager.instance.jobDone(isDone: false)
         } else if sender === self.jobDoneBtn {
             self.completeAction()
+            ParseServerManager.instance.jobDone(isDone: true)
         } else if sender === self.renewOTPBtn {
             self.startRequestingOTP()
         }

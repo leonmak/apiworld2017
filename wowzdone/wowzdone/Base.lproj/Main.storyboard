@@ -127,11 +127,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhg-37-0hn">
-                                <rect key="frame" x="21" y="617" width="156" height="30"/>
+                                <rect key="frame" x="21" y="612" width="156" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="156" id="Gng-mb-pC0"/>
-                                    <constraint firstAttribute="height" constant="30" id="R3A-ZR-63A"/>
+                                    <constraint firstAttribute="height" constant="35" id="R3A-ZR-63A"/>
                                 </constraints>
                                 <state key="normal" title="Schedule OTP">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,10 +139,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8Y-zu-B8j">
-                                <rect key="frame" x="197" y="617" width="156" height="30"/>
+                                <rect key="frame" x="197" y="612" width="156" height="35"/>
                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Big-O5-Ts9"/>
+                                    <constraint firstAttribute="height" constant="35" id="Big-O5-Ts9"/>
                                     <constraint firstAttribute="width" constant="156" id="ZFA-Wh-ShB"/>
                                 </constraints>
                                 <state key="normal" title="Send Now">

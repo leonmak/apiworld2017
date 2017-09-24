@@ -85,7 +85,44 @@ class ParseServerManager {
                 // if none create
             }
         }
-
-
+    }
+    
+    func jobDone(isDone: Bool) {
+        let query = PFQuery(className: "JobDone")
+        query.whereKeyExists("isDone")
+        print("done job")
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if error == nil {
+                print("Successfully retrieved \(objects!.count) scores.")
+                if objects!.count == 0 {
+                    let message: PFObject = PFObject(className: "JobDone")
+                    message["isDone"] = isDone
+                    message.saveInBackground { (_, er) in
+                        if !(er != nil) {
+                            print("Job uploaded to back4app")
+                        } else {
+                            print(er as Any)
+                        }
+                    }
+                } else {
+                    // if existing
+                    if let object = objects!.first 
+                    {
+                        object.setValue(isDone, forKey: "isDone")
+                        object.saveInBackground { (_, er) in
+                            if !(er != nil) {
+                                print("Job uploaded to back4app")
+                            } else {
+                                print(er as Any)
+                            }
+                        }
+                    }
+                    
+                }
+            } else {
+                print("ERROR: ", error.debugDescription)
+                // if none create
+            }
+        }
     }
 }
