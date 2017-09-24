@@ -35,6 +35,7 @@ class TestController: UIViewController, CLLocationManagerDelegate {
         getRedirectUrl(envelopeId: self.lastEnvelopeId, callback: {
             (url) in ()
             print("REDIRECT URL: " + url)
+            UIApplication.shared.open(NSURL(string:url)! as URL, options: [:], completionHandler: nil)
         })
     }
     
@@ -63,7 +64,7 @@ class TestController: UIViewController, CLLocationManagerDelegate {
                 print("Request: \(String(describing: response.request))")   // original url request
                 print("Response: \(String(describing: response.response))") // http url response
                 print("Result: \(response.result)")                         // response serialization result
-                
+
                 if let json = response.result.value as? [String: Any] {
                     print("JSON: \(json)") // serialized json response
                     
