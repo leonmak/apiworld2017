@@ -32,6 +32,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     var renewOTPBtn: ColoredButton?
     var jobDoneBtn: ColoredButton?
 
+    @IBOutlet weak var profileImg: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         requestLocation()
         
         setupStartJob()
+        profileImg.layer.zPosition = 100
     }
     
     override var prefersStatusBarHidden: Bool {
