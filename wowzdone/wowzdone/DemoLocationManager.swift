@@ -11,7 +11,13 @@ import MapKit
 class DemoLocationManager: CLLocationManager {
     var updateLocationTimer: Timer?
     var count = 0
+    var isOwner = false
 
+    convenience init(isOwner: Bool=false) {
+        self.init()
+        self.isOwner = isOwner
+    }
+    
     override func requestWhenInUseAuthorization() {
     }
     
@@ -26,6 +32,12 @@ class DemoLocationManager: CLLocationManager {
     }
 
     func updateUserLocation() {
+        if self.isOwner {
+            self.delegate?.locationManager!(self, didUpdateLocations: [Constants.ownerDestination])
+            
+            return
+        }
+        
         if count == Constants.contractorPath.count {
             updateLocationTimer?.invalidate()
             return

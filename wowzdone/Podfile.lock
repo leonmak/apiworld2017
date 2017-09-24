@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - Bolts-Swift (1.3.0)
   - Bolts/Tasks (1.8.4)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
@@ -11,25 +12,34 @@ PODS:
     - SQLite.swift (= 0.11.2)
   - Parse (1.15.3):
     - Bolts/Tasks (~> 1.8)
+  - ParseLiveQuery (2.2.1):
+    - Bolts-Swift (~> 1.3)
+    - Parse (~> 1.15.0)
+    - Starscream (= 2.1.1)
   - SQLite.swift (0.11.2):
     - SQLite.swift/standard (= 0.11.2)
   - SQLite.swift/standard (0.11.2)
+  - Starscream (2.1.1)
 
 DEPENDENCIES:
   - Alamofire
   - ChameleonFramework/Swift
   - HyperTrack
   - Parse
+  - ParseLiveQuery
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Bolts-Swift: fa98d1b59fc1acea9b21a21306dcdca1c85e3737
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   GzipSwift-beta: b74b704e17b4b7ea1de99460ec5ad6458d078f32
   HyperTrack: 049622905475cd15de1e0cc959c315f06c732acd
   Parse: cdc0f1f975ee8be0409e66f21b05df4ae067047c
+  ParseLiveQuery: bc2321032ddae9d6ecfd4842d1b10210d453b08b
   SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
+  Starscream: 142bd8ef24592d985daee9fa48c936070b85b15f
 
-PODFILE CHECKSUM: 8a4fb6cc16ce85b726133e93cead0a4318bba531
+PODFILE CHECKSUM: ce5810f1b1df49eb54f307230413d2b40f31dd7c
 
 COCOAPODS: 1.3.1

@@ -13,6 +13,7 @@
 		770D6C401F77992900BD8582 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C3F1F77992900BD8582 /* Role.swift */; };
 		770D6C421F77B4D200BD8582 /* ParseServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C411F77B4D200BD8582 /* ParseServerManager.swift */; };
 		770D6C491F77E81200BD8582 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C481F77E81200BD8582 /* ProfileImageView.swift */; };
+		770D6C4B1F77EB6700BD8582 /* OwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C4A1F77EB6700BD8582 /* OwnerVC.swift */; };
 		778065931F77242E0072D360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065921F77242E0072D360 /* AppDelegate.swift */; };
 		778065951F77242E0072D360 /* ContractorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065941F77242E0072D360 /* ContractorVC.swift */; };
 		778065981F77242E0072D360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778065961F77242E0072D360 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		770D6C411F77B4D200BD8582 /* ParseServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseServerManager.swift; sourceTree = "<group>"; };
 		770D6C471F77D77800BD8582 /* wowzdone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wowzdone.entitlements; sourceTree = "<group>"; };
 		770D6C481F77E81200BD8582 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		770D6C4A1F77EB6700BD8582 /* OwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerVC.swift; sourceTree = "<group>"; };
 		7780658F1F77242E0072D360 /* wowzdone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wowzdone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		778065921F77242E0072D360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		778065941F77242E0072D360 /* ContractorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorVC.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				770D6C341F77758100BD8582 /* View */,
 				770D6C3F1F77992900BD8582 /* Role.swift */,
 				778065921F77242E0072D360 /* AppDelegate.swift */,
+				770D6C4A1F77EB6700BD8582 /* OwnerVC.swift */,
 				778065941F77242E0072D360 /* ContractorVC.swift */,
 				778065961F77242E0072D360 /* Main.storyboard */,
 				778065991F77242E0072D360 /* Assets.xcassets */,
@@ -259,22 +262,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GzipSwift-beta/Gzip.framework",
 				"${BUILT_PRODUCTS_DIR}/HyperTrack/HyperTrack.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseLiveQuery/ParseLiveQuery.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gzip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyperTrack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseLiveQuery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -292,6 +301,7 @@
 				778065951F77242E0072D360 /* ContractorVC.swift in Sources */,
 				770D6C3C1F77876F00BD8582 /* ColoredButton.swift in Sources */,
 				77B993521F7767B600336118 /* DemoLocationManager.swift in Sources */,
+				770D6C4B1F77EB6700BD8582 /* OwnerVC.swift in Sources */,
 				770D6C3E1F77940700BD8582 /* ImageAnnotation.swift in Sources */,
 				770D6C491F77E81200BD8582 /* ProfileImageView.swift in Sources */,
 				770D6C421F77B4D200BD8582 /* ParseServerManager.swift in Sources */,
