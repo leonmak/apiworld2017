@@ -123,6 +123,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // PUSH NOTIFICATIONS:
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        print("DEVICE TOKEN: \(token)")
         HyperTrack.didRegisterForRemoteNotificationsWithDeviceToken(deviceToken: deviceToken)
     }
     
@@ -131,9 +133,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("PUSH FROM HT: ", userInfo)
+        
         if (HyperTrack.isHyperTrackNotification(userInfo: userInfo)){
             HyperTrack.didReceiveRemoteNotification(userInfo: userInfo)
-            print("PUSH FRMO HT: ", userInfo)
         }
     }
 
