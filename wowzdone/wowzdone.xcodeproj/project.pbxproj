@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47BB1F481F779C510051E1F8 /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BB1F471F779C510051E1F8 /* TestController.swift */; };
 		47D0DDA61F776C2F009FD7E7 /* DocuSignSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D0DDA51F776C23009FD7E7 /* DocuSignSDK.framework */; };
 		47D0DDA71F776C2F009FD7E7 /* DocuSignSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47D0DDA51F776C23009FD7E7 /* DocuSignSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47D0DDA91F776C50009FD7E7 /* DocuSignSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47D0DDA81F776C50009FD7E7 /* DocuSignSDK.bundle */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		3229FD92F5BD21FD7FDCE44C /* Pods_wowzdone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wowzdone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BB1F471F779C510051E1F8 /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		47D0DD9B1F776B99009FD7E7 /* DocuSignSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocuSignSDK.framework; path = "../../../Downloads/iOS-offline-templates-sdk-master/DocuSignSDK.framework"; sourceTree = "<group>"; };
 		47D0DDA51F776C23009FD7E7 /* DocuSignSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocuSignSDK.framework; path = wowzdone/DocuSignSDK.framework; sourceTree = "<group>"; };
 		47D0DDA81F776C50009FD7E7 /* DocuSignSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DocuSignSDK.bundle; path = wowzdone/DocuSignSDK.framework/DocuSignSDK.bundle; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				778065991F77242E0072D360 /* Assets.xcassets */,
 				7780659B1F77242E0072D360 /* LaunchScreen.storyboard */,
 				7780659E1F77242E0072D360 /* Info.plist */,
+				47BB1F471F779C510051E1F8 /* TestController.swift */,
 			);
 			path = wowzdone;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BB1F481F779C510051E1F8 /* TestController.swift in Sources */,
 				778065951F77242E0072D360 /* ViewController.swift in Sources */,
 				778065931F77242E0072D360 /* AppDelegate.swift in Sources */,
 			);

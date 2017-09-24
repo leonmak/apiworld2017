@@ -10,7 +10,6 @@ import UIKit
 import HyperTrack
 import Parse
 import Alamofire
-import DocuSignSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,9 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.isLocalDatastoreEnabled = true // If you need to enable local data store
         }
         Parse.initialize(with: configuration)
-
-        
-        DSMManager.setup()
         
         return true
     }

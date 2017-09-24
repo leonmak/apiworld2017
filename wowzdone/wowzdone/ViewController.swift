@@ -18,12 +18,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupMap()
         requestLocation()
         
-        // login()
-        // showSendSignatureRequest()
+        login()
     }
     
     func login() {
