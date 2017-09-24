@@ -37,10 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                
 //            }
 //        )
-        
-        login("contractor", "password")
-        updateContractorLocation(10.0, 10.0)
-        
+//
+//        login("contractor", "password")
+//        updateContractorLocation(10.0, 10.0)
+//
 //        signup(
 //            "owner",
 //            "owner",
@@ -79,52 +79,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func signup(username: String, type: String, email: String, password: String, callback: () -> ()) {
-        var user = PFUser()
-        user.username = username
-        user.password = password
-        user.email = email
-
-        user.signUpInBackgroundWithBlock {
-            (succeeded: Bool, error: NSError?) -> Void in
-            if let error = error {
-                let errorString = error.userInfo["error"] as? NSString
-                // Show the errorString somewhere and let the user try again.
-            } else {
-                callback()
-            }
-        }
-    }
-    
-    func login(username: String, password: String) {
-        PFUser.logInWithUsername(username, password: password)
-    }
-    
-    func signup(username: String, type: String, email: String, password: String, callback: () -> ()) {
-        var user = PFUser()
-        user.username = username
-        user.password = password
-        user.email = email
-        
-        user.signUpInBackgroundWithBlock {
-            (succeeded: Bool, error: NSError?) -> Void in
-            if let error = error {
-                let errorString = error.userInfo["error"] as? NSString
-                // Show the errorString somewhere and let the user try again.
-            } else {
-                callback()
-            }
-        }
-    }
-
-    
-    func updateContractorLocation(lat: Float, long: Float) {
-        let point = PFGeoPoint(latitude: lat, longitude: long)
-        
-        var currentUser = PFUser.currentUser()
-        currentUser["location"] = point
-        currentUser.saveInBackground()
-    }
+//    func signup(username: String, type: String, email: String, password: String, callback: () -> ()) {
+//        var user = PFUser()
+//        user.username = username
+//        user.password = password
+//        user.email = email
+//
+//        user.signUpInBackgroundWithBlock {
+//            (succeeded: Bool, error: NSError?) -> Void in
+//            if let error = error {
+//                let errorString = error.userInfo["error"] as? NSString
+//                // Show the errorString somewhere and let the user try again.
+//            } else {
+//                callback()
+//            }
+//        }
+//    }
+//
+//    func login(username: String, password: String) {
+//        PFUser.logInWithUsername(username, password: password)
+//    }
+//
+//    func signup(username: String, type: String, email: String, password: String, callback: () -> ()) {
+//        var user = PFUser()
+//        user.username = username
+//        user.password = password
+//        user.email = email
+//
+//        user.signUpInBackgroundWithBlock {
+//            (succeeded: Bool, error: NSError?) -> Void in
+//            if let error = error {
+//                let errorString = error.userInfo["error"] as? NSString
+//                // Show the errorString somewhere and let the user try again.
+//            } else {
+//                callback()
+//            }
+//        }
+//    }
+//
+//
+//    func updateContractorLocation(lat: Float, long: Float) {
+//        let point = PFGeoPoint(latitude: lat, longitude: long)
+//
+//        var currentUser = PFUser.currentUser()
+//        currentUser["location"] = point
+//        currentUser.saveInBackground()
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

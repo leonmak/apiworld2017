@@ -9,5 +9,6 @@ target 'wowzdone' do
   pod 'HyperTrack'
   pod 'Parse'
   pod 'Alamofire'
+  pod 'ChameleonFramework/Swift'
 
 end

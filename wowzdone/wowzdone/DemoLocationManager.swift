@@ -34,6 +34,10 @@ class DemoLocationManager: CLLocationManager {
         self.delegate?.locationManager!(self, didUpdateLocations: [Constants.contractorPath[count]])
         count += 1
     }
+    
+    func stopUpdatingTimer() {
+        updateLocationTimer?.invalidate()
+    }
         
     // TODO: Override all other methods used.
     

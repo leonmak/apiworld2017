@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		770D6C381F7775DA00BD8582 /* ImageAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C371F7775DA00BD8582 /* ImageAnnotation.swift */; };
+		770D6C3C1F77876F00BD8582 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C3B1F77876F00BD8582 /* ColoredButton.swift */; };
+		770D6C3E1F77940700BD8582 /* ImageAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C3D1F77940700BD8582 /* ImageAnnotation.swift */; };
 		778065931F77242E0072D360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065921F77242E0072D360 /* AppDelegate.swift */; };
 		778065951F77242E0072D360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065941F77242E0072D360 /* ViewController.swift */; };
 		778065981F77242E0072D360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778065961F77242E0072D360 /* Main.storyboard */; };
@@ -21,7 +22,8 @@
 
 /* Begin PBXFileReference section */
 		3229FD92F5BD21FD7FDCE44C /* Pods_wowzdone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wowzdone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		770D6C371F7775DA00BD8582 /* ImageAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnnotation.swift; sourceTree = "<group>"; };
+		770D6C3B1F77876F00BD8582 /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
+		770D6C3D1F77940700BD8582 /* ImageAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnnotation.swift; sourceTree = "<group>"; };
 		7780658F1F77242E0072D360 /* wowzdone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wowzdone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		778065921F77242E0072D360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		778065941F77242E0072D360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +63,8 @@
 		770D6C341F77758100BD8582 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				770D6C371F7775DA00BD8582 /* ImageAnnotation.swift */,
+				770D6C3D1F77940700BD8582 /* ImageAnnotation.swift */,
+				770D6C3B1F77876F00BD8582 /* ColoredButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GzipSwift-beta/Gzip.framework",
 				"${BUILT_PRODUCTS_DIR}/HyperTrack/HyperTrack.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
@@ -232,6 +236,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gzip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyperTrack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
@@ -250,8 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				778065951F77242E0072D360 /* ViewController.swift in Sources */,
+				770D6C3C1F77876F00BD8582 /* ColoredButton.swift in Sources */,
 				77B993521F7767B600336118 /* DemoLocationManager.swift in Sources */,
-				770D6C381F7775DA00BD8582 /* ImageAnnotation.swift in Sources */,
+				770D6C3E1F77940700BD8582 /* ImageAnnotation.swift in Sources */,
 				778065931F77242E0072D360 /* AppDelegate.swift in Sources */,
 				77B9934A1F77563A00336118 /* Constants.swift in Sources */,
 				77B9934C1F775A1E00336118 /* Extensions.swift in Sources */,

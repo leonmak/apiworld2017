@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 
 struct Constants {
+    static let initialLocation = CLLocationCoordinate2D(latitude: 37.73406434, longitude: -122.422057)
     static let ownerDestination = CLLocationCoordinate2D(latitude: 37.73457769, longitude: -122.423272)
     static let contractorPath: [CLLocation] = [
         CLLocation(latitude: 37.73406434, longitude: -122.422057),

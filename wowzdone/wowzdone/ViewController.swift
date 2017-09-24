@@ -9,20 +9,23 @@
 import UIKit
 import MapKit
 import CoreLocation
+import ChameleonFramework
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     var isDemo = true
     var mapView = MKMapView()
-    var userAnnotationView: MKAnnotationView?
-    var userAnnotation: ImageAnnotation?
+    var userAnnotation: MKPointAnnotation?
     var locationManager = DemoLocationManager()
+    
+    var startButton: ColoredButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupMap()
         requestLocation()
+        setupStartJob()
     }
 
     // MARK: - SETUP
@@ -58,14 +61,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func updateUserLocation(lat: Double, long: Double) {
         let coord = CLLocationCoordinate2D(latitude: lat, longitude: long)
         print("UPDATE LOC: ", coord)
+        
+        if isDemo && locationManager.count == 0 {
+            locationManager.stopUpdatingTimer() // initialize map
+        }
 
         DispatchQueue.main.async {
-            if self.userAnnotationView == nil {
-                self.userAnnotation = ImageAnnotation(location: coord)
-                self.userAnnotation!.imageName = "user_pin"
+            if self.userAnnotation == nil {
+                self.userAnnotation = MKPointAnnotation()
+                self.userAnnotation!.coordinate = coord
                 self.userAnnotation!.subtitle = "User Location"
-                self.userAnnotationView = MKPinAnnotationView(annotation: self.userAnnotation, reuseIdentifier: "user")
-                self.mapView.addAnnotation(self.userAnnotationView!.annotation!)
+                self.mapView.addAnnotation(self.userAnnotation!)
             }
 
             // Update map user coordinates and map
@@ -86,30 +92,35 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         print(error.localizedDescription)
     }
     
-    //MARK: - Custom Annotation
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let reuseIdentifier = "user_pin"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
-        
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
-            annotationView?.canShowCallout = true
-        } else {
-            annotationView?.annotation = annotation
-        }
-        
-        let customPointAnnotation = annotation as! ImageAnnotation
-        if let imageName = customPointAnnotation.imageName {
-            annotationView?.image = UIImage(named: imageName)
-        }
-        
-        return annotationView
-    }
-    
     // MARK: - touches
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
+    }
+    
+    // MARK: start jpb
+    func setupStartJob() {
+        let width = view.frame.width * 0.8
+        let height = CGFloat(45.0)
+        let x = view.frame.width * 0.1
+        let y = view.frame.height * 0.8
+        let frame = CGRect(x: x, y: y, width: width, height: height)
+        self.startButton = ColoredButton(frame: frame, color: UIColor.flatBlack)
+        self.startButton.frame = frame
+        self.startButton.setTitle("Start Job", for: .normal)
+        self.startButton.addTarget(self, action: #selector(self.buttonClicked(_:)), for: .touchUpInside)
+
+        self.view.addSubview(self.startButton)
+    }
+    
+    func buttonClicked(_ sender: AnyObject?) {
+        
+        if sender === self.startButton {
+            print("STARTED JOB")
+            locationManager.startUpdatingLocation()
+            // create job
+            // assign to user
+        }
     }
 }
 
