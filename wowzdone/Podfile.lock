@@ -5,7 +5,7 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - GzipSwift-beta (4.0.0-beta.2)
-  - HyperTrack (0.4.53):
+  - HyperTrack (0.4.55):
     - Alamofire (= 4.4.0)
     - GzipSwift-beta (= 4.0.0-beta.2)
     - SQLite.swift (= 0.11.2)
@@ -26,7 +26,7 @@ SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   GzipSwift-beta: b74b704e17b4b7ea1de99460ec5ad6458d078f32
-  HyperTrack: b13784b5f2f08d4208edf9a4f82d97b5dc526fea
+  HyperTrack: 049622905475cd15de1e0cc959c315f06c732acd
   Parse: cdc0f1f975ee8be0409e66f21b05df4ae067047c
   SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
 

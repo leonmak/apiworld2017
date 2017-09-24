@@ -15,7 +15,7 @@ class ImageAnnotation: NSObject, MKAnnotation {
     var subtitle: String?
     var imageName: String?
     
-    init(location coord:CLLocationCoordinate2D) {
+    init(location coord: CLLocationCoordinate2D) {
         self.coordinate = coord
         super.init()
     }

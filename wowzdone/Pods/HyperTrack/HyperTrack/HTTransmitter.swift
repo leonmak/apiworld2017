@@ -146,7 +146,7 @@ final class Transmitter {
         completionHandler(nil)
     }
     
-    func startMockTracking(completionHandler: ((_ error: HyperTrackError?) -> Void)?) {
+    func startMockTracking(origin:CLLocationCoordinate2D? = nil, destination:CLLocationCoordinate2D? = nil, completionHandler: ((_ error: HyperTrackError?) -> Void)?) {
         if !canStartTracking(completionHandler: completionHandler) {
             return
         }
@@ -161,14 +161,24 @@ final class Transmitter {
         }
         
         var originLatlng:String = ""
-        
+    
         if let location = locationManager.getLastKnownLocation() {
             originLatlng = "\(location.coordinate.latitude),\(location.coordinate.longitude)"
         } else {
             originLatlng = "28.556446,77.174095"
         }
         
-        self.requestManager.getSimulatePolyline(originLatlng: originLatlng) { (polyline, error) in
+        if (origin != nil){
+            originLatlng = "\(origin?.latitude ?? 28.556446),\(origin?.longitude ?? 77.174095)"
+        }
+        
+        var destinationLatlng:String? = nil
+
+        if destination != nil {
+            destinationLatlng = "\(destination?.latitude ?? 28.556446),\(destination?.longitude ?? 77.174095)"
+        }
+        
+        self.requestManager.getSimulatePolyline(originLatlng: originLatlng,destinationLatLong: destinationLatlng) { (polyline, error) in
             if let error = error {
                 guard let completionHandler = completionHandler else { return }
                 completionHandler(error)

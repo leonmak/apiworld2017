@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7999747E5D1CF3F5A266B42B1CC836B7'
+               BlueprintIdentifier = '798D9BFDCAD9BD92A3624B333A1B176B'
                BlueprintName = 'HyperTrack'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'HyperTrack.framework'>

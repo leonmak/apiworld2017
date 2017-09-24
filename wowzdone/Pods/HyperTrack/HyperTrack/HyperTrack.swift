@@ -576,5 +576,10 @@ import CoreMotion
         placePickerView.setUpView()
         return placePickerView
     }
+    
+    
+    @objc public class func startMockTracking(params:HTMockLocationParams){
+        Transmitter.sharedInstance.startMockTracking(origin: params.origin, destination: params.destination, completionHandler: nil)
+    }
 
 }
