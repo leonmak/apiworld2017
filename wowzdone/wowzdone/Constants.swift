@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 
 struct Constants {
+    static let parseLocationMessageClass = "LocationMessage"
     static let name = "Leon"
     static let phone = "16282274364"
     static let contractorPath: [CLLocation] = [

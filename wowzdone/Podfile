@@ -8,6 +8,7 @@ target 'wowzdone' do
   # Pods for wowzdone
   pod 'HyperTrack'
   pod 'Parse'
+  pod 'ParseLiveQuery'
   pod 'Alamofire'
   pod 'ChameleonFramework/Swift'
 

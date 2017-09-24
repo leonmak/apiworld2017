@@ -28,26 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.isLocalDatastoreEnabled = true // If you need to enable local data store
         }
         Parse.initialize(with: configuration)
-        
-//        signup(
-//            username: "contractor",
-//            type: "contractor",
-//            email: "contractor@remotely.com",
-//            password: "password",
-//            callback: { _ in }
-//
-//        )
-
-//        login("contractor", "password")
-//        updateContractorLocation(10.0, 10.0)
-//
-//        signup(
-//            username: "owner",
-//            type: "owner1",
-//            email: "owner@remotely.com",
-//            password: "password",
-//            callback: { _ in }
-//        )
         return true
     }
 

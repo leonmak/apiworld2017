@@ -20,7 +20,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     var userAnnotation: MKPointAnnotation?
     var locationManager = DemoLocationManager()
     
-    var role = Role.contractor
+    
     var htUser: HyperTrackUser?
     var htActionId: String?
     
@@ -35,12 +35,12 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupHyperTrack()
+
         setupMap()
         requestLocation()
         
         setupStartJob()
-        setupHyperTrack()
-
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -122,6 +122,11 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
             }, completion: { _ in
                 self.mapView.region.span = MKCoordinateSpan(latitudeDelta: 0.0006, longitudeDelta: 0.0006)
             })
+            
+            if self.htUser == nil {
+                return
+            }
+            ParseServerManager.instance.upsertMessage(coord: coord, userId: self.htUser!.id!)
             
             if self.userAnnotation!.coordinate.near(other: Constants.ownerDestination.coordinate) {
                 self.startRequestingOTP()
@@ -231,15 +236,10 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         let reuseIdentifier = "destination_pin"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
         
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        if annotationView != nil, let customPointAnnotation = annotation as? ImageAnnotation {
+            annotationView?.image = UIImage(named: customPointAnnotation.imageName!)
             annotationView?.canShowCallout = true
-        } else {
-            annotationView?.annotation = annotation
         }
-        
-        let customPointAnnotation = annotation as! ImageAnnotation
-        annotationView?.image = UIImage(named: customPointAnnotation.imageName!)
         return annotationView
     }
 
@@ -348,6 +348,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     
     override func viewDidDisappear(_ animated: Bool) {
         self.stopTrackingAction()
+        locationManager.stopUpdatingTimer()
     }
 }
 
