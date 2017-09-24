@@ -34,7 +34,7 @@ class TestController: UIViewController, CLLocationManagerDelegate {
         getRedirectUrl(envelopeId: self.lastEnvelopeId, callback: {
             (url) in ()
             print("REDIRECT URL: " + url)
-            UIApplication.shared.open(NSURL(string:url)! as URL, options: [:], completionHandler: nil)
+            UIApplication.shared.open(NSURL(string:"https://demo.docusign.net/Member/EmailStart.aspx?a=e7f5f4ab-ba8f-44b9-aeba-feb21ea2ac7a&acct=c5078423-539c-41ef-82cf-9359419fb6ac&er=3306a55f-840e-45a9-b10b-771913adaede&espei=bc3fc6f8-a879-4b04-8037-3bb471a702d8")! as URL, options: [:], completionHandler: nil)
         })
     }
     
