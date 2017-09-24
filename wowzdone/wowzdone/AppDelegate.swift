@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initialize(with: configuration)
         
+        
         let testObject = PFObject(className: "TestObject")
         testObject["foo"] = "bar"
         testObject.saveInBackground { (success: Bool, error: Error?) in
