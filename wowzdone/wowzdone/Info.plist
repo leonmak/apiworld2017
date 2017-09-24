@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>wowdone</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -25,8 +27,14 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Track your location on the map</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Track your location on the map</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Track your location on the map</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Track your device motion</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -54,11 +62,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Track your location on the map</string>
-	<key>NSMotionUsageDescription</key>
-	<string>Track your device motion</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Track your location on the map</string>
 </dict>
 </plist>

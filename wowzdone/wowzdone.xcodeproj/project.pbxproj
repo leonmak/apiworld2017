@@ -10,6 +10,7 @@
 		770D6C3C1F77876F00BD8582 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C3B1F77876F00BD8582 /* ColoredButton.swift */; };
 		770D6C3E1F77940700BD8582 /* ImageAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C3D1F77940700BD8582 /* ImageAnnotation.swift */; };
 		770D6C401F77992900BD8582 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C3F1F77992900BD8582 /* Role.swift */; };
+		770D6C421F77B4D200BD8582 /* ParseServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D6C411F77B4D200BD8582 /* ParseServerManager.swift */; };
 		778065931F77242E0072D360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065921F77242E0072D360 /* AppDelegate.swift */; };
 		778065951F77242E0072D360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065941F77242E0072D360 /* ViewController.swift */; };
 		778065981F77242E0072D360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778065961F77242E0072D360 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		770D6C3B1F77876F00BD8582 /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
 		770D6C3D1F77940700BD8582 /* ImageAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnnotation.swift; sourceTree = "<group>"; };
 		770D6C3F1F77992900BD8582 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		770D6C411F77B4D200BD8582 /* ParseServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseServerManager.swift; sourceTree = "<group>"; };
 		7780658F1F77242E0072D360 /* wowzdone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wowzdone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		778065921F77242E0072D360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		778065941F77242E0072D360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +37,6 @@
 		7780659E1F77242E0072D360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B993491F77563A00336118 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		77B9934B1F775A1E00336118 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		77B993501F7762E000336118 /* contractor-walk.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "contractor-walk.gpx"; sourceTree = "<group>"; };
 		77B993511F7767B600336118 /* DemoLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLocationManager.swift; sourceTree = "<group>"; };
 		C3A406A920877708B48AEA48 /* Pods-wowzdone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wowzdone.release.xcconfig"; path = "Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone.release.xcconfig"; sourceTree = "<group>"; };
 		E25CC57071598872E27EA541 /* Pods-wowzdone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wowzdone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wowzdone/Pods-wowzdone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				770D6C341F77758100BD8582 /* View */,
-				77B993501F7762E000336118 /* contractor-walk.gpx */,
 				770D6C3F1F77992900BD8582 /* Role.swift */,
 				778065921F77242E0072D360 /* AppDelegate.swift */,
 				778065941F77242E0072D360 /* ViewController.swift */,
@@ -104,6 +104,7 @@
 				77B993491F77563A00336118 /* Constants.swift */,
 				77B9934B1F775A1E00336118 /* Extensions.swift */,
 				77B993511F7767B600336118 /* DemoLocationManager.swift */,
+				770D6C411F77B4D200BD8582 /* ParseServerManager.swift */,
 			);
 			path = wowzdone;
 			sourceTree = "<group>";
@@ -266,6 +267,7 @@
 				770D6C3C1F77876F00BD8582 /* ColoredButton.swift in Sources */,
 				77B993521F7767B600336118 /* DemoLocationManager.swift in Sources */,
 				770D6C3E1F77940700BD8582 /* ImageAnnotation.swift in Sources */,
+				770D6C421F77B4D200BD8582 /* ParseServerManager.swift in Sources */,
 				778065931F77242E0072D360 /* AppDelegate.swift in Sources */,
 				77B9934A1F77563A00336118 /* Constants.swift in Sources */,
 				77B9934C1F775A1E00336118 /* Extensions.swift in Sources */,

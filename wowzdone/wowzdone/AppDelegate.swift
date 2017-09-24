@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         HyperTrack.initialize("pk_71bb1d6f08dcd32727f1cea4506eed3eb9942878")
-        
+        HyperTrack.registerForNotifications()
+
         let configuration = ParseClientConfiguration {
             $0.applicationId = "jvzkcJ27j6ZtvJf5TCwhvbptRsdiSDLOrlJMdwaN"
             $0.clientKey = "FPmnSKZx0dMrSBjDm09xBKoRm20QZmEwo71DJw8A⁠⁠⁠⁠"
@@ -51,32 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        )
 
-        
-//        getOTP(callback: {
-//            (otp: String) -> () in
-//            print(otp)
-//        })
-
         return true
-    }
-    
-    func getOTP(callback: @escaping (String) -> ()) {
-        print("GETTING OTP")
-        Alamofire.request("http://apiworld2017.back4app.io/reached", method: .post).responseJSON {
-            response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
-            
-            if let json = response.result.value as? [String: Any] {
-                print("JSON: \(json)") // serialized json response
-                
-                print("GOT OTP")
-                if let otp = json["otp"] as? String {
-                    callback(otp)
-                }
-            }
-        }
     }
     
 //    func signup(username: String, type: String, email: String, password: String, callback: () -> ()) {
@@ -146,6 +122,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    // PUSH NOTIFICATIONS:
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        HyperTrack.didRegisterForRemoteNotificationsWithDeviceToken(deviceToken: deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        HyperTrack.didFailToRegisterForRemoteNotificationsWithError(error: error)
+    }
+
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        if (HyperTrack.isHyperTrackNotification(userInfo: userInfo)){
+            HyperTrack.didReceiveRemoteNotification(userInfo: userInfo)
+            print("PUSH FRMO HT: ", userInfo)
+        }
     }
 
 
