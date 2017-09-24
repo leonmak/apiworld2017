@@ -10,11 +10,12 @@ import UIKit
 import ChameleonFramework
 
 class ColoredButton: UIButton {
-    convenience init(frame: CGRect, color: UIColor) {
+    convenience init(frame: CGRect, color: UIColor, borderColor: UIColor=UIColor.flatGray) {
         self.init(frame: frame)
         self.backgroundColor = color
+        self.layer.borderColor = borderColor.cgColor
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.cornerRadius = 6
@@ -24,7 +25,7 @@ class ColoredButton: UIButton {
         self.layer.borderWidth = 1.0
         
         self.layer.shadowColor = UIColor.flatGray.cgColor
-        self.layer.shadowOpacity = 0.9
+        self.layer.shadowOpacity = 0.85
         self.layer.shadowRadius = 6
         self.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
     }

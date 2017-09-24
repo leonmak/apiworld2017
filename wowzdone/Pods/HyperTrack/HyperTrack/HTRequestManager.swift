@@ -599,8 +599,13 @@ class RequestManager {
         }
     }
     
-    func getSimulatePolyline(originLatlng: String, completionHandler: ((_ polyline: String?, _ error: HyperTrackError?) -> Void)?) {
-        let urlPath = "simulate/?origin=\(originLatlng)"
+    func getSimulatePolyline(originLatlng: String,destinationLatLong:String? = nil,completionHandler: ((_ polyline: String?, _ error: HyperTrackError?) -> Void)?) {
+        
+        var urlPath = "simulate/?origin=\(originLatlng)"
+        if destinationLatLong != nil {
+            urlPath = "simulate/?origin=\(originLatlng)&destination=\(destinationLatLong ?? "")"
+
+        }
         HTTPRequest(method:.get, urlPath:urlPath, jsonParams:[:]).makeRequest { response in
             switch response.result {
             case .success:

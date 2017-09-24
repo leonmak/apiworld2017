@@ -11,7 +11,6 @@ import UIKit
 import MapKit
 import CoreLocation
 import Alamofire
-import DocuSignSDK
 
 class TestController: UIViewController, CLLocationManagerDelegate {
     
