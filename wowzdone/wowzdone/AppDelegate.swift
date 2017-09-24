@@ -9,6 +9,7 @@
 import UIKit
 import HyperTrack
 import Parse
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,15 +27,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.isLocalDatastoreEnabled = true // If you need to enable local data store
         }
         Parse.initialize(with: configuration)
+
         
-        
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackground { (success: Bool, error: Error?) in
-            print("Object has been saved.")
-        }
+//        getOTP(callback: {
+//            (otp: String) -> () in
+//            print(otp)
+//        })
 
         return true
+    }
+    
+    func getOTP(callback: @escaping (String) -> ()) {
+        print("GETTING OTP")
+        Alamofire.request("http://apiworld2017.back4app.io/reached", method: .post).responseJSON {
+            response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value as? [String: Any] {
+                print("JSON: \(json)") // serialized json response
+                
+                print("GOT OTP")
+                if let otp = json["otp"] as? String {
+                    callback(otp)
+                }
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -43,5 +43,10 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Track your location on the map</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
