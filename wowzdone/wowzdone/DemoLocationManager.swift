@@ -30,7 +30,6 @@ class DemoLocationManager: CLLocationManager {
             updateLocationTimer?.invalidate()
             return
         }
-        print("COUNT: ", count)
         self.delegate?.locationManager!(self, didUpdateLocations: [Constants.contractorPath[count]])
         count += 1
     }

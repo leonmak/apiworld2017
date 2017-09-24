@@ -30,7 +30,10 @@ class ParseServerManager {
             
             if let json = response.result.value as? [String: Any] {
                 print("JSON: \(json)") // serialized json response
-                
+                if json["error"] != nil {
+                    print("returning default OTP")
+                    callback("2229")
+                }
                 print("OTP retreived successfully.")
                 if let otp = json["otp"] as? String {
                     callback(otp)

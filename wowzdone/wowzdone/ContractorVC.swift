@@ -32,6 +32,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     var renewOTPBtn: ColoredButton?
     var jobDoneBtn: ColoredButton?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMap()
@@ -41,7 +42,11 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         setupHyperTrack()
 
     }
-
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     // MARK: - SETUP
     // MARK: Map
     func setupMap() {
@@ -127,7 +132,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     // MARK: - OTP
     func startRequestingOTP() {
         self.setStartBtnToRequesingtOTP()
-        ParseServerManager.instance.getOTP(callback: {otp in
+        ParseServerManager.instance.getOTP(callback: { otp in
             self.displayOTPAlert(otp)
         })
     }
@@ -143,7 +148,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         })
         self.present(alert, animated: true, completion: nil)
     }
-    
+
     func setStartBtnToReceivedOTP() {
         UIView.animate(withDuration: 1.5, animations: {
             self.startButton.backgroundColor = UIColor.flatGreen
@@ -152,7 +157,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         displayRenewOTPBtn()
         displayJobDoneBtn()
     }
-    
+
     func displayRenewOTPBtn() {
         if self.renewOTPBtn != nil {
             return
@@ -205,7 +210,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     
     func countdownOTP() {
         self.timeLeftOTP -= 1
-        print("Counting down: \(self.timeLeftOTP)")
+        // print("Counting down: \(self.timeLeftOTP)")
         self.startButton.setTitle("OTP: \(self.OTP) (\(self.timeLeftOTP) sec)", for: .normal)
         if self.timeLeftOTP == 0 {
             self.countDownTimer?.invalidate()
@@ -288,11 +293,6 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         if sender === self.startButton {
             print("STARTED JOB")
             locationManager.startUpdatingLocation()
-            if self.isDemo {
-                HyperTrack.startMockTracking()
-            } else {
-                HyperTrack.startTracking()
-            }
             upsertAction()
         } else if sender === self.jobDoneBtn {
             self.completeAction()
@@ -320,6 +320,23 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
         }
     }
     
+    func startTrackingAction(params: HTMockLocationParams) {
+        if self.isDemo {
+            let htActionParams = HTMockLocationParams(destination: Constants.ownerDestination.coordinate)
+            HyperTrack.startMockTracking(params: htActionParams)
+        } else {
+            HyperTrack.startTracking()
+        }
+    }
+    
+    func stopTrackingAction() {
+        if isDemo {
+            HyperTrack.stopMockTracking()
+        } else {
+            HyperTrack.stopTracking()
+        }
+    }
+    
     func completeAction() {
         guard let actionId = self.htActionId else {
             NSLog("No Action ID created and assigned!")
@@ -330,11 +347,7 @@ class ContractorVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelega
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        if isDemo {
-            HyperTrack.stopMockTracking()
-        } else {
-            HyperTrack.stopTracking()
-        }
+        self.stopTrackingAction()
     }
 }
 
