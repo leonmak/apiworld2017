@@ -7,5 +7,6 @@ target 'wowzdone' do
 
   # Pods for wowzdone
   pod 'HyperTrack'
+  pod 'Parse'
 
 end

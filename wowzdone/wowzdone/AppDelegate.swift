@@ -8,6 +8,7 @@
 
 import UIKit
 import HyperTrack
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,13 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        // Initialize HyperTrack SDK with your Publishable Key here
-        // Refer to documentation at
-        // https://docs.hypertrack.com/gettingstarted/authentication.html
-        // @NOTE: Add **"pk_71bb1d6f08dcd32727f1cea4506eed3eb9942878"** here for SDK to be
-        // authenticated with HyperTrack Server
         HyperTrack.initialize("pk_71bb1d6f08dcd32727f1cea4506eed3eb9942878")
+        
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "jvzkcJ27j6ZtvJf5TCwhvbptRsdiSDLOrlJMdwaN"
+            $0.clientKey = "FPmnSKZx0dMrSBjDm09xBKoRm20QZmEwo71DJw8A⁠⁠⁠⁠"
+            $0.server = "https://parseapi.back4app.com"
+            $0.isLocalDatastoreEnabled = true // If you need to enable local data store
+        }
+        Parse.initialize(with: configuration)
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackground { (success: Bool, error: Error?) in
+            print("Object has been saved.")
+        }
 
         return true
     }
