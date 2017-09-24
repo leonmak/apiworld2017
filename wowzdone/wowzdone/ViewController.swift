@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+
+import HyperTrack
 import CoreLocation
 import ChameleonFramework
 
@@ -17,6 +19,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var mapView = MKMapView()
     var userAnnotation: MKPointAnnotation?
     var locationManager = DemoLocationManager()
+    var role = Role.contractor
+    
+    var htUser: HyperTrackUser?
     
     var startButton: ColoredButton!
 
@@ -26,6 +31,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         setupMap()
         requestLocation()
         setupStartJob()
+        
+        setupHyperTrack()
     }
 
     // MARK: - SETUP
@@ -34,6 +41,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.mapView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         self.mapView.showsUserLocation = !isDemo
         self.view.addSubview(mapView)
+    }
+    
+    func setupHyperTrack() {
+        HyperTrack.requestAlwaysAuthorization()
+        HyperTrack.requestMotionAuthorization()
+        HyperTrack.getOrCreateUser("Mr. Bob", _phone: Constants.phone, Constants.phone) { (user, error) in
+            if (error != nil) {
+                NSLog(error.debugDescription)
+                return
+            }
+            if (user != nil) {
+                self.htUser = user
+            }
+        }
+
     }
     
     func requestLocation() {
@@ -103,11 +125,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let width = view.frame.width * 0.8
         let height = CGFloat(45.0)
         let x = view.frame.width * 0.1
-        let y = view.frame.height * 0.8
+        let y = view.frame.height * 0.85
         let frame = CGRect(x: x, y: y, width: width, height: height)
-        self.startButton = ColoredButton(frame: frame, color: UIColor.flatBlack)
+        self.startButton = ColoredButton(frame: frame,
+                                         color: UIColor.flatBlack,
+                                         borderColor: UIColor.flatBlackDark)
         self.startButton.frame = frame
-        self.startButton.setTitle("Start Job", for: .normal)
+        self.startButton.setTitle("Accept Job Request", for: .normal)
         self.startButton.addTarget(self, action: #selector(self.buttonClicked(_:)), for: .touchUpInside)
 
         self.view.addSubview(self.startButton)
@@ -118,9 +142,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         if sender === self.startButton {
             print("STARTED JOB")
             locationManager.startUpdatingLocation()
+            HyperTrack.startTracking()
             // create job
             // assign to user
         }
     }
+    
+    // MARK: - HT ACTION
+    
 }
 
