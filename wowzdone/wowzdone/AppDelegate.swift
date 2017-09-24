@@ -10,6 +10,7 @@ import UIKit
 import HyperTrack
 import Parse
 import Alamofire
+import DocuSignSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,13 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: configuration)
 
         
-//        getOTP(callback: {
-//            (otp: String) -> () in
-//            print(otp)
-//        })
-
+        DSMManager.setup()
+        
         return true
     }
+    
+    
     
     func getOTP(callback: @escaping (String) -> ()) {
         print("GETTING OTP")

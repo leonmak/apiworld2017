@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47D0DDA61F776C2F009FD7E7 /* DocuSignSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D0DDA51F776C23009FD7E7 /* DocuSignSDK.framework */; };
+		47D0DDA71F776C2F009FD7E7 /* DocuSignSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47D0DDA51F776C23009FD7E7 /* DocuSignSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47D0DDA91F776C50009FD7E7 /* DocuSignSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47D0DDA81F776C50009FD7E7 /* DocuSignSDK.bundle */; };
 		778065931F77242E0072D360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065921F77242E0072D360 /* AppDelegate.swift */; };
 		778065951F77242E0072D360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778065941F77242E0072D360 /* ViewController.swift */; };
 		778065981F77242E0072D360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778065961F77242E0072D360 /* Main.storyboard */; };
@@ -15,8 +18,25 @@
 		FEFC15240B045E0F39B04751 /* Pods_wowzdone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3229FD92F5BD21FD7FDCE44C /* Pods_wowzdone.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		47D0DDA41F776BD3009FD7E7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				47D0DDA71F776C2F009FD7E7 /* DocuSignSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3229FD92F5BD21FD7FDCE44C /* Pods_wowzdone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wowzdone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D0DD9B1F776B99009FD7E7 /* DocuSignSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocuSignSDK.framework; path = "../../../Downloads/iOS-offline-templates-sdk-master/DocuSignSDK.framework"; sourceTree = "<group>"; };
+		47D0DDA51F776C23009FD7E7 /* DocuSignSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocuSignSDK.framework; path = wowzdone/DocuSignSDK.framework; sourceTree = "<group>"; };
+		47D0DDA81F776C50009FD7E7 /* DocuSignSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DocuSignSDK.bundle; path = wowzdone/DocuSignSDK.framework/DocuSignSDK.bundle; sourceTree = "<group>"; };
 		7780658F1F77242E0072D360 /* wowzdone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wowzdone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		778065921F77242E0072D360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		778065941F77242E0072D360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEFC15240B045E0F39B04751 /* Pods_wowzdone.framework in Frameworks */,
+				47D0DDA61F776C2F009FD7E7 /* DocuSignSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +73,8 @@
 		778065861F77242E0072D360 = {
 			isa = PBXGroup;
 			children = (
+				47D0DDA81F776C50009FD7E7 /* DocuSignSDK.bundle */,
+				47D0DDA51F776C23009FD7E7 /* DocuSignSDK.framework */,
 				778065911F77242E0072D360 /* wowzdone */,
 				778065901F77242E0072D360 /* Products */,
 				1C643E4FAC7186F63347BACC /* Pods */,
@@ -83,6 +106,7 @@
 		8043F011397382BAF687D2E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47D0DD9B1F776B99009FD7E7 /* DocuSignSDK.framework */,
 				3229FD92F5BD21FD7FDCE44C /* Pods_wowzdone.framework */,
 			);
 			name = Frameworks;
@@ -101,6 +125,8 @@
 				7780658D1F77242E0072D360 /* Resources */,
 				AAC461059C3E10DD686F768E /* [CP] Embed Pods Frameworks */,
 				498F84A48DED02D14130AFF3 /* [CP] Copy Pods Resources */,
+				47D0DDA41F776BD3009FD7E7 /* Embed Frameworks */,
+				47D0DDAA1F776C5C009FD7E7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -150,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D0DDA91F776C50009FD7E7 /* DocuSignSDK.bundle in Resources */,
 				7780659D1F77242E0072D360 /* LaunchScreen.storyboard in Resources */,
 				7780659A1F77242E0072D360 /* Assets.xcassets in Resources */,
 				778065981F77242E0072D360 /* Main.storyboard in Resources */,
@@ -159,6 +186,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		47D0DDAA1F776C5C009FD7E7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/DocuSignSDK.framework/strip-frameworks.sh\"";
+		};
 		498F84A48DED02D14130AFF3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,6 +408,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GMX3JSSQ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/wowzdone",
+				);
 				INFOPLIST_FILE = wowzdone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Maklemak.wowzdone;
@@ -384,6 +428,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GMX3JSSQ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/wowzdone",
+				);
 				INFOPLIST_FILE = wowzdone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Maklemak.wowzdone;

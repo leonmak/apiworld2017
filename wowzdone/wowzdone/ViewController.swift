@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import DocuSignSDK
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -20,6 +21,48 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         setupMap()
         requestLocation()
+        
+        // login()
+        // showSendSignatureRequest()
+    }
+    
+    func login() {
+        let username = "1cc0d5ef-e1b2-40bd-91fe-5380a53de8d4";
+        let password = "password";
+        let integratorKey = "ed4b15ef-88b7-4bc8-9c30-f0f657a9791f";
+        let hostUrl: URL! = URL(string: "https://demo.docusign.net/restapi");
+        
+        DSMManager.login(withUserId: username, password: password, integratorKey: integratorKey, host: hostUrl, completionBlock: { (err: Error?) in
+            
+            if (err != nil)
+            {
+                print(String(describing: err));
+                // display error prompt
+                
+            }
+            else
+            {
+                print("User authenticated");
+            }
+        })
+    }
+    
+    // Must be after user authenticated
+    func showSendSignatureRequest() {
+        let templateId: String = "4bbf5eeb-d05f-4059-9327-33ba3b5ca5ee"
+        DSMTemplatesManager.init().presentSendTemplateControllerWithTemplate(
+            withId: templateId,
+            signingMode: DSMSigningMode.online,
+            presenting: self,
+            animated: true,
+            completion: { vc, err in
+                if err != nil {
+                    print(err)
+                }
+                
+                print("done")
+            }
+        )
     }
 
     override func didReceiveMemoryWarning() {
