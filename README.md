@@ -1,1 +1,10 @@
-# apiworld2017
+# Remotely - API World 2017
+
+This is a hack by Leon Mak [@leonmak](https://github.com/leonmak), Ngin Yun Chuan [@nginyc](https://github.com/nginyc), Ong Qi Yong [@oqyxxy](https://github.com/oqyxxy), Ang Jing Shun and Lim Mei Mei from National University of Singapore & NUS Overseas College program, under the contraints of the 1-night [API World 2017 hackathon](http://apiworld.co/hackathon/). We envisioned this platform where house owners can remotely authorize and monitor caregivers to enter their houses. What's so different is that users would be able to give on-demand, temporary access (as opposed to having to give a physical key), through the use of a real-time generated One-Time Password (OTP) that caregivers would receive to unlock the house's digital lock, as well as monitor the activity of the caregiver while the session is in progress. Imagine - such remote authorization and monitoring can also be used to allow delivery of expensive parcels into homes, as well as other home services such as cleaners and plumbers to work without you being physically at home. 
+
+Our accelerate.im submission page is available [here](http://accelerate.im/projects/859), while our demo video is available [here](https://youtu.be/3qmP_1J4VRk).
+
+We used [HyperTrack's](https://www.hypertrack.com/) iOS SDK to track the location of the caregiver before and upon arrival. [Back4App](https://www.back4app.com/) supported our backend: Cloud Code to host an Express server that serves OTP generation and verification endpoints, and the in-built Parse Server abstraction to share locations and OTPs between apps. When the caregiver completes his/her assignment, the home owner would use [DocuSign](https://www.docusign.com) to acknowledge the receipt of the service. Using an Arduino connected to a numpad, a red light bulb and a green light bulb, we simulated the digital lock opening the door with real-time generated OTPs. We wanted to integrate on-demand live streaming with [Wowza](https://www.wowza.com/)between the caregiver and the home owner for remote interactivity and verification, but unfortunately couldn't find enough time. 
+
+We were very honored to have won [Back4App's challenge](http://accelerate.im/challenges/160), and more importantly, the overall 1st place in the API World hackathon. 
+
